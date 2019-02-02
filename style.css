@@ -32,17 +32,17 @@
   color: black;
 }
 
-
-body{
-  text-align: center;
+main {
+  margin-top: 18%;
+  text-align: justify;
   font-family: 'Special Elite', cursive;
-  /* font-size: 100%; */
+  font-size: 100%;
   /* width: 75vmin; */
 }
 
-
 h2 {
-  font-size: 120%;
+  text-align: center;
+  /* font-size: 120%; */
 }
 
 /* Style The Dropdown Button */
