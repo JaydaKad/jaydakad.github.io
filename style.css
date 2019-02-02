@@ -27,7 +27,7 @@ html {
   display: block;
   color: white;
   padding: 3% 2%;
-  font-size: 1.5vmax;
+  font-size: 2vw;
   text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ main {
   margin-top: 18%;
   text-align: justify;
   font-family: 'Special Elite', cursive;
-  font-size: 100%; /* width: 75vmin; */
+  font-size: 2.5vw; 
   padding: 10%;
 }
 
