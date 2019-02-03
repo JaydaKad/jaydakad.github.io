@@ -8,8 +8,8 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vmax;
-  height: 17%;
+  width: 100vw;
+  height: 17vh;
 }
 
 .nav p {
@@ -17,8 +17,8 @@ html {
   color: white;
   display: block;
   font-family: 'Permanent Marker', cursive;
-  font-size: 5vh;
-  padding-left: 3%;
+  font-size: 2.8vw;
+  padding-left: 3vw;
 }
 
 .nav a {
@@ -26,7 +26,7 @@ html {
   float: right;
   display: block;
   color: white;
-  padding: 3% 2%;
+  padding: 3vh 2vw;
   font-size: 2vw;
   text-decoration: none;
 }
@@ -37,11 +37,11 @@ html {
 }
 
 main {
-  margin-top: 18%;
+  margin-top: 18vh;
   text-align: justify;
   font-family: 'Special Elite', cursive;
-  font-size: 2.5vw; 
-  padding: 10%;
+  font-size: 2.5vw;
+  padding: 1vh 10vw;
 }
 
 h2 {
