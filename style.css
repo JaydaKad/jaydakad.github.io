@@ -60,6 +60,50 @@ section {
   padding-top: 18vh;
 }
 
+/* Image carousel */
+.slideshow-container {
+/*   padding: 1vh 10vw; */
+  max-width: 70vw;
+  position: relative;
+  margin: auto;
+}
+
+
+.slides {
+/*   margin-top: 18vh; */
+  max-width: 70vw;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .prev, .next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 4vw;
+}
+
+.next {
+  right: 0;
+}
+
+.play {
+  border: none;
+  background-color: transparent;
+  left: 0%;
+  position: absolute;
+  top: 100%;
+  width: auto;
+  color: white;
+  font-size: 4vw;
+}
 /* .myimages {
   width:40%; /* you can use % */
   /* height: auto;
