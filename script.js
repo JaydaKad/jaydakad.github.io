@@ -3,6 +3,10 @@
 let slideIndex = 1;
 showDivs(slideIndex);
 
+function onStart() {
+  showDivs(1);
+}()
+
 function changeSlide(n) {
   showDivs(slideIndex += n);
 }
