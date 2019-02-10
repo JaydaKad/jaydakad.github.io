@@ -1,3 +1,3 @@
 
 # FAC
-[jaydakad.github.io](https://jaydakad.github.io/)
+view website: [jaydakad.github.io](https://jaydakad.github.io/)
