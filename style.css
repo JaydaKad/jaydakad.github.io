@@ -71,11 +71,15 @@ section {
 
 .slides {
 /*   margin-top: 18vh; */
-  max-width: 70vw;
-  display: block;
+  display: none;
+  width: 70vw;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+.active {
+  display: block;
 }
 
   .prev, .next {
@@ -99,7 +103,7 @@ section {
   background-color: transparent;
   left: 0%;
   position: absolute;
-  top: 100%;
+  top: 0%;
   width: auto;
   color: white;
   font-size: 4vw;

@@ -1,71 +1,63 @@
-//Image carousel:
-// Moving through slides using arrow buttons.
-let slideIndex = 1;
-showDivs(slideIndex);
 
-function onStart() {
-  showDivs(1);
-}()
+let slideIndex = 0;
 
 function changeSlide(n) {
-  showDivs(slideIndex += n);
+  showDivs(slideIndex + n);
 }
 
-function showDivs(n) {
+function showDivs(tempIndex) {
   let i;
   let x = document.getElementsByClassName("slides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";   //hides image
+  if (tempIndex > x.length) {
+    slideIndex = 1;
+  } else if (tempIndex < 1) {
+    slideIndex = x.length - 1;
+  } else {
+    slideIndex = tempIndex
   }
-  x[slideIndex-1].style.display = "block";   //shows image
+
+  for (i = 0; i < x.length; i++) {
+    x[i].className = "slides"
+  }
+  x[slideIndex-1].className = "slides active";   //shows image
+
 }
 
-// Moving through slides using arrow keys.
+// Arrow keys to change slides
 document.onkeydown = checkKey;
 
 function checkKey(key) {
-    if (key.keyCode === 37) {
-        // left arrow
+    if (key.keyCode === 37) {        // left arrow
+
       changeSlide(-1);
     }
-    else if (key.keyCode === 39) {
-       // right arrow
+    else if (key.keyCode === 39) {      // right arrow
+
       changeSlide(+1);
     }
 }
 
-// Toggle slideshow
+// play/pause image carousel
+let playing;
+let loop;
 
-var playing = true;
-var pauseButton = document.getElementById('pause');
-
-slideIndex = 0;
-let SS
-
-function carousel() {
+function startCarousel() {
   playing = true;
-  var i;
-  var x = document.getElementsByClassName("slides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  SS = setTimeout(carousel, 2000); // Change image every 2 seconds
+  changeSlide(+1);
+  loop = setTimeout(startCarousel, 2500); // Change image every 2.5 seconds
+
 }
 
-function myStopFunction() {
+function stopCarousel() {
   playing = false;
-  clearTimeout(SS);
+  clearTimeout(loop);
 }
 
-pauseButton.onclick = function() {
+
+function playPause() {
     if(playing) {
-    myStopFunction();
+    stopCarousel();
   } else {
-    carousel();
+    startCarousel();
   }
 };
